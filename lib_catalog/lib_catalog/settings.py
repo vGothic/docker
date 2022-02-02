@@ -25,7 +25,7 @@ SECRET_KEY = 'unen%+=v7wr#d%&rz@u&1n)2h)128&j0y2w&bk73r=03h(+!df'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = "*"
 
 
 # Application definition
@@ -135,8 +135,6 @@ REST_FRAMEWORK = {
                             'rest_framework.filters.SearchFilter']
 }
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 FIXTURES_DIRS = os.path.join(BASE_DIR, 'catalog/fixtures')
